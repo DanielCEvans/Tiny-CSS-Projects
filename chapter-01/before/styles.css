@@ -1,1 +1,54 @@
+/* all p elements within body regardless of how far down the tree */
+body p {
+    color: black;
+}
 
+/* direct descendent */
+.list > li {
+    color: crimson;
+}
+
+/* adjacent siblings */
+header + p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* general siblings. Not just the immediate adjacent sibling */
+header ~ img {
+    border: 4px solid crimson;
+}
+
+/* anchor tags that contain an hred attribute that are yet to be visited */
+a:link {
+    color: #1D70B8;
+}
+
+/* anchor tags that have been visited (in browsers history) */
+a:visited {
+    color: #4C2C92;
+}
+
+a:hover {
+    color: #003078;
+}
+
+a:focus {
+    outline: solid 1px crimson;
+}
+
+/* Pseudo-elements allow us to style a specific part of an element */
+header + p::first-letter {
+    color: crimson;
+    font-style: italic;
+}
+
+/* Attribute selector */
+[lang="it"]::before {
+    content: "EMOJI"
+}
+
+/* Universal selector */
+* {
+    font-family: sans-serif;
+}
